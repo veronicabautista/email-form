@@ -40,10 +40,9 @@ function iniciarAPP() {
 function validarFormulario(e){
   if(e.target.value.length > 0){
     //Elimina los errores
-    const error = document.querySelector('p .error');    
-    if(error){
-      error.remove();
-    }
+    const error = document.querySelector('p.error');   
+    error.remove(); 
+
     e.target.classList.remove('border', 'border-red-500');
     e.target.classList.add('border', 'border-green-500');
   }else{
@@ -56,9 +55,8 @@ function validarFormulario(e){
 
     if (er.test(e.target.value)){
       const error = document.querySelector('p .error');
-      if(error){
-        error.remove();
-      }
+      error.remove();
+
       e.target.classList.remove('border', 'border-red-500');
       e.target.classList.add('border', 'border-green-500');
     }else {
